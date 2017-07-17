@@ -1,6 +1,6 @@
-Website of the School of Data in Switzerland
+Data toolbox
 
-(Work in progress)
+(A work in progress)
 
 See https://jekyllrb.com/docs/quickstart/ for deployment instructions.
 
