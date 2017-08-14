@@ -1,5 +1,5 @@
 ---
-title: School of Data Schweiz
+title: Data Toolbox
 language: Deutsch
 lang: de
 ref: index
@@ -11,16 +11,16 @@ layout: default
 	<h5>{{ site.de.description }}</h5>
 </header>
 
-<hr>
-<h2>{{ site.de.current.title }}</h2>
 <section id="frontpage" class="tiles">
 {% for post in site.posts %}{% if post.frontpage %}
 	<article class="{{ post.style }}">
 		<span class="image">
 			{% if post.image contains '://' %}
 			<img src="{{ post.image }}" />
-			{% else %}
+			{% elsif post.image %}
 			<img src="{{ site.baseurl }}/{{ post.image }}" />
+			{% else %}
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
 			{% endif %}
 		</span>
 		<a href="{{ post.url | prepend: site.baseurl }}">
@@ -32,18 +32,41 @@ layout: default
 		</a>
 	</article>
 {% endif %}{% endfor %}
-
-	<article class="style7">
-		<span class="image"><img src="{{ site.baseurl }}/images/alpsup.jpg"></span>
-		<a href="#contact">
-			<p>-/-</p>
-			<h2>Ihren Anlass</h2>
-			<div class="content">
-				<p>Gerne offen für Vorschläge</p>
-			</div>
-		</a>
-	</article>
 </section>
+
+<hr>
+{% for cat in site.de.toolbox.categories %}
+<section class="toolbox" id="cat{{ cat.name }}">
+	<a name="{{ cat.name }}"></a>
+	<div class="part{{ forloop.index }}">
+		<h2>{{ cat.title }}</h2>
+		<p class="subtitle">{{ cat.info }}</p>
+		<div class="tiles">
+			{% for tool in site.de.toolbox.tools %}
+				<article class="style{{ forloop.index }}">
+				{% if tool.categories contains cat.name %}
+					<span class="image">
+						{% if tool.image contains '://' %}
+						<img src="{{ tool.image }}" />
+						{% elsif tool.image %}
+						<img src="{{ site.baseurl }}/{{ tool.image }}" />
+						{% else %}
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+						{% endif %}
+					</span>
+					<a href="{{ tool.url }}" target="_blank">
+						<h3>{{ tool.name }}</h3>
+						<div class="content">
+							<p>{{ tool.info }}</p>
+						</div>
+					</a>
+				{% endif %}
+				</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+{% endfor %}
 
 <hr>
 <section class="contact" id="contact">
@@ -52,9 +75,6 @@ layout: default
 		<div class="row uniform">
 			<div class="6u 12u$(small)">
 				{{ site.de.signup.header }}
-				<input type="radio" checked id="signup-human-me" name="signup-human">
-				<label for="signup-human-me">{{ site.de.signup.myself }}</label>
-				<!--
 				<div class="select-wrapper">
 					<select name="SKILL" id="signup-category">
 						<option value="">{{ site.de.signup.skills }}</option>
@@ -64,12 +84,6 @@ layout: default
 						<option value="Expert">{{ site.de.signup.expert }}</option>
 					</select>
 				</div>
-				-->
-			</div>
-			<div class="6u$ 12u$(small)">
-				<input type="radio" id="signup-human-org" name="signup-human" onclick="$('#signup-org').show()">
-				<label for="signup-human-org">{{ site.de.signup.myorg }}</label>
-				<input style="display:none" type="text" name="ORG" id="signup-org" value="" placeholder="{{ site.de.signup.org }}" />
 			</div>
 			<div class="6u 12u$(xsmall)">
 				<input type="text" name="NAME" id="signup-name" value="" placeholder="{{ site.de.signup.name }}" required />

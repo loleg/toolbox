@@ -1,17 +1,15 @@
 # Language-specific strings
 de:
-  title: Toolbox - School of Data
-  tagline: School of Data [Toolbox]
+  title: Toolbox - School of Data CH
+  tagline: Data Toolbox
   description: >
-    Eine Sammlung von open source Tools empfohlen von der School of Data Schweiz für erfolgreichen Umgang mit offene Daten.
-    Wir bieten weitere Unterstützung über <a href="https://forum.schoolofdata.ch">unser Forum</a>
-    und organisieren projektbasierte <a href="https://schoolofdata.ch">Workshops</a>.
+    Eine Sammlung von Open Source Tools empfohlen in der School of Data Schweiz
+    für den Umgang mit offenen Daten. Wir bieten Unterstützung über unser
+    <a href="https://forum.schoolofdata.ch">Forum</a>
+    und organisieren projektbasierte
+    <a href="https://schoolofdata.ch">Workshops</a>.
   signup:
-    title: Tool Empfehlen
-    header: Als ...
-    myself: Person
-    myorg: Organisation
-    org: Firma/Schule
+    title: Empfehlen
     name: Name
     email: E-mail
     comment: Nachricht
@@ -23,15 +21,36 @@ de:
     send: Senden
   toolbox:
     categories:
-      - name: extraction
-        title: Extraction
-        info: These tools help to find, identify, and collect data in one place.
+      - name: define
+        title: Define
+        info: These tools can help to formulate good questions, which is key to finding good data.
+      - name: find
+        title: Find & Verify
+        info: Often the same tool is used in both of these critical stages.
+      - name: get
+        title: Get
+        info: Beyond downloads - collecting data through forms, mobile apps, web scraping and aggregation.
+      - name: clean
+        title: Clean
+        info: Removing invalid entries, combining datasets, and doing any number of other normalizations.
+      - name: analyse
+        title: Analyse
+        info: Machines can do a lot of it, but working with data will always involve analytical work.
+      - name: present
+        title: Present
+        info: Data only has impact when it is packaged in an appropriate way for the audiences it needs to aim at
     tools:
-      - categories: [ extraction, portals ]
-        name: OGD Kanton Thurgau
-        url: https://ogd.tg.ch/
+      - categories: [ "find" ]
+        name: opendata.swiss
+        url: https://opendata.swiss/
         image: https://ogd.tg.ch/public/upload/assets/20/logo-kanton-thurgau.svg
-        info: Der OGD-Ausschuss ist für die fachliche Steuerung der Umsetzung von OGD im Kanton Thurgau zuständig. Er setzt sich zusammen aus Vertreter/innen datenpublizierender Ämter, dem e-Government-Koordinator sowie dem Datenschutzbeauftragten (beisitzend).
+        info: Der OGD-Ausschuss ist für die fachliche Steuerung der Umsetzung von OGD.
+      - categories: [ "get" ]
+        name: morph.io
+        url: https://morph.io/documentation
+      - categories: [ "clean" ]
+        name: OpenRefine
+        url: http://openrefine.org/
 
 # Site links
 title: School of Data Toolbox
