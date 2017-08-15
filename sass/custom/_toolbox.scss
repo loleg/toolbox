@@ -3,4 +3,50 @@
     h2 { margin-bottom: 0; }
     .subtitle { margin-top: 0; }
   }
+
+  .image {
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    img {
+      width: 150px;
+      clear: both;
+    }
+  }
+
+  .categories {
+    display: inline-block;
+    float: right;
+
+    a {
+        font-size: 0px;
+        background-repeat: no-repeat;
+        height: 48px;
+        width: 48px;
+        display: inline-block;
+        background-size: contain;
+        border: none;
+    }
+    .cat-ask {
+      background-image: url(/images/pipeline-ask.png);
+    }
+    .cat-analyse {
+      background-image: url(/images/pipeline-analyse.png);
+    }
+    .cat-clean {
+      background-image: url(/images/pipeline-clean.png);
+    }
+    .cat-find {
+      background-image: url(/images/pipeline-find.png);
+    }
+    .cat-get {
+      background-image: url(/images/pipeline-get.png);
+    }
+    .cat-present {
+      background-image: url(/images/pipeline-present.png);
+    }
+    .cat-verify {
+      background-image: url(/images/pipeline-verify.png);
+    }
+  }
 }

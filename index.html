@@ -12,6 +12,24 @@ layout: default
 </header>
 
 <section id="frontpage" class="tiles">
+
+		<article class="style7">
+			<span class="image">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+			</span>
+			<a href="#tools"><p></p>
+				<h2>Tools</h2>
+			</a>
+		</article>
+		<article class="style7">
+			<span class="image">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+			</span>
+			<a href="#categories"><p></p>
+				<h2>Categories</h2>
+			</a>
+		</article>
+
 {% for post in site.posts %}{% if post.frontpage %}
 	<article class="{{ post.style }}">
 		<span class="image">
@@ -34,7 +52,39 @@ layout: default
 {% endif %}{% endfor %}
 </section>
 
-<hr>
+<a name="tools"></a>
+<hr><h1>Tools</h1>
+<section id="toolbox" class="toolbox">
+{% for tool in site.de.toolbox.tools %}
+	<span class="image">
+		{% if tool.image contains '://' %}
+		<img src="{{ tool.image }}" />
+		{% elsif tool.image %}
+		<img src="{{ site.baseurl }}/{{ tool.image }}" />
+		{% else %}
+		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+		{% endif %}
+	</span>
+	<div class="categories">
+	{% for cat in site.de.toolbox.categories %}
+		{% if tool.categories contains cat.name %}
+		<a title="{{ cat.title }}" href="#cat{{ cat.name }}" class="cat-{{ cat.name }}">
+			<span>{{ cat.name }}</span>
+		</a>
+		{% endif %}
+	{% endfor %}
+	</div>
+	<a href="{{ tool.url }}" target="_blank">
+		<h3>{{ tool.name }}</h3>
+		<div class="content">
+			<p>{{ tool.info }}</p>
+		</div>
+	</a>
+{% endfor %}
+</section>
+
+<a name="categories"></a>
+<hr><h1>Categories</h1>
 {% for cat in site.de.toolbox.categories %}
 <section class="toolbox" id="cat{{ cat.name }}">
 	<a name="{{ cat.name }}"></a>
@@ -42,33 +92,14 @@ layout: default
 		<h2>{{ cat.title }}</h2>
 		<p class="subtitle">{{ cat.info }}</p>
 		<div class="tiles">
-			{% for tool in site.de.toolbox.tools %}
-				<article class="style{{ forloop.index }}">
-				{% if tool.categories contains cat.name %}
-					<span class="image">
-						{% if tool.image contains '://' %}
-						<img src="{{ tool.image }}" />
-						{% elsif tool.image %}
-						<img src="{{ site.baseurl }}/{{ tool.image }}" />
-						{% else %}
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-						{% endif %}
-					</span>
-					<a href="{{ tool.url }}" target="_blank">
-						<h3>{{ tool.name }}</h3>
-						<div class="content">
-							<p>{{ tool.info }}</p>
-						</div>
-					</a>
-				{% endif %}
-				</article>
-			{% endfor %}
+
 		</div>
 	</div>
 </section>
 {% endfor %}
 
-<hr>
+<a name="contact"></a>
+<hr><h1>Contact</h1>
 <section class="contact" id="contact">
 	<h2>{{ site.de.signup.title }}</h2>
 	<form method="post" action="https://utou.ch/scoda.php">
