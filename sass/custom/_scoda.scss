@@ -6,6 +6,20 @@
   position: relative;
 }
 
+// With region
+#header .logo {
+  height: 92px;
+  .region {
+    width: 100%;
+    padding-left: 31px;
+    background: #2e2e6d;
+    bottom: 0px;
+    position: absolute;
+    font-size: 14px;
+    height: 24px;
+  }
+}
+
 .tiles article > .image img {
   height: 12em;
 }

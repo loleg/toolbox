@@ -5,7 +5,7 @@ de:
   description: >
     Eine Sammlung von Open Source Tools empfohlen in der School of Data Schweiz
     für den Umgang mit offenen Daten. Wir bieten Unterstützung über unser
-    <a href="https://forum.schoolofdata.ch">Forum</a>
+    <a href="https://forum.schoolofdata.ch/categories">Forum</a>
     und organisieren projektbasierte
     <a href="https://schoolofdata.ch">Workshops</a>.
   signup:
@@ -25,11 +25,14 @@ de:
         title: Define
         info: These tools can help to formulate good questions, which is key to finding good data.
       - name: find
-        title: Find & Verify
-        info: Often the same tool is used in both of these critical stages.
+        title: Find
+        info: Searching and finding data that has already been released is easier with portals and agents.
       - name: get
         title: Get
-        info: Beyond downloads - collecting data through forms, mobile apps, web scraping and aggregation.
+        info: Beyond file downloads, data is collected data in forms, mobile apps, scraping and aggregation.
+      - name: verify
+        title: Verify
+        info: Tools to check authenticity and authority, completeness and consistency of datasets.
       - name: clean
         title: Clean
         info: Removing invalid entries, combining datasets, and doing any number of other normalizations.
@@ -38,22 +41,24 @@ de:
         info: Machines can do a lot of it, but working with data will always involve analytical work.
       - name: present
         title: Present
-        info: Data only has impact when it is packaged in an appropriate way for the audiences it needs to aim at
+        info: Tools to package data in an appropriate way for the audiences we wish to aim it at.
     tools:
       - categories: [ "find" ]
-        name: opendata.swiss
-        url: https://opendata.swiss/
-        image: https://ogd.tg.ch/public/upload/assets/20/logo-kanton-thurgau.svg
-        info: Der OGD-Ausschuss ist für die fachliche Steuerung der Umsetzung von OGD.
-      - categories: [ "get" ]
-        name: morph.io
-        url: https://morph.io/documentation
+        name: CKAN
+        url: https://handbook.opendata.swiss/support/api.html
+        image: https://handbook.opendata.swiss/theme/ogdch/handbook_logo.svg
+        info: Webbasierte Datenkatalog-Software, die insbesondere von öffentlichen Einrichtungen für das Teilen „offener Daten“ verwendet wird
       - categories: [ "clean" ]
         name: OpenRefine
         url: http://openrefine.org/
+        info: Cleaning and improvement
+      - categories: [ "" ]
+        name:
+        url:
 
 # Site links
 title: School of Data Toolbox
+region: Switzerland
 url: "https://toolbox.schoolofdata.ch"
 email: info@schoolofdata.ch
 forum: "https://forum.schoolofdata.ch"
