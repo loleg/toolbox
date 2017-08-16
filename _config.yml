@@ -21,8 +21,8 @@ de:
     send: Senden
   toolbox:
     categories:
-      - name: define
-        title: Define
+      - name: ask
+        title: Ask
         info: These tools can help to formulate good questions, which is key to finding good data.
       - name: find
         title: Find
@@ -42,37 +42,6 @@ de:
       - name: present
         title: Present
         info: Tools to package data in an appropriate way for the audiences we wish to aim it at.
-    tools:
-      - categories: [ "find" ]
-        name: CKAN
-        url: https://handbook.opendata.swiss/support/api.html
-        image: https://images.duckduckgo.com/iu/?u=http%3A%2F%2Ftrac.ckan.org%2Fraw-attachment%2Fticket%2F698%2Fckan-srcmirror.png&f=1
-        info: Webbasierte Datenkatalog-Software, die insbesondere von öffentlichen Einrichtungen für das Teilen „offener Daten“ verwendet wird
-      - categories: [ "clean" ]
-        name: OpenRefine
-        url: http://openrefine.org/
-        image: https://datalets.ch/projects/openrefine.jpg
-        info: An open source power tool to clean and improve messy data.
-      - categories: [ "present" ]
-        name: D3.js
-        url: https://d3js.org/
-        image: https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fdennyglee.files.wordpress.com%2F2014%2F06%2Fd3js-logo.jpg&f=1
-        info: A JavaScript library for producing dynamic, interactive data visualizations in web browsers.
-      - categories: [ "analyse" ]
-        name: QGIS
-        url: https://www.qgis.org/de/site/
-        image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/QGIS_2.2_Valmiera_showing_new_menu_design.png/435px-QGIS_2.2_Valmiera_showing_new_menu_design.png
-        info: Ein freies Geoinformationssystem zum Betrachten, Bearbeiten und Erfassen von räumlichen Daten.
-      - categories: [ "present" ]
-        name: Leaflet
-        url: https://de.wikipedia.org/wiki/Leaflet
-        image: https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fleafletjs.com%2Fexamples%2Fcustom-icons%2Fthumbnail.png&f=1
-        info: Eine freie JavaScript-Bibliothek, mit der WebGIS-Anwendungen erstellt werden können.
-      - categories: [ "verify" ]
-        name: GoodTables
-        url: http://goodtables.okfnlabs.org/
-        image: https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fassets.okfn.org%2Fp%2Flabs%2Fimg%2Ficon-512.png&f=1
-        info: Online tool to check for structural problems and ensure that data fits a specific schema.
 
 # Site links
 title: School of Data Toolbox

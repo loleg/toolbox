@@ -4,7 +4,7 @@ author: Oleg Lavrovsky
 title: Background
 date: 2017-08-01
 style: style7
-frontpage: true
+permalink: overview.html
 ---
 
 The [School of Data Handbook](https://schoolofdata.org/handbook/) advises us that:

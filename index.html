@@ -17,7 +17,8 @@ layout: default
 			<span class="image">
 				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
 			</span>
-			<a href="#tools"><p></p>
+			<a href="#tools">
+				<i class="fa fa-wrench" aria-hidden="true"></i>
 				<h2>Tools</h2>
 			</a>
 		</article>
@@ -25,37 +26,26 @@ layout: default
 			<span class="image">
 				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
 			</span>
-			<a href="#categories"><p></p>
-				<h2>Categories</h2>
+			<a href="#categories">
+				<i class="fa fa-cubes" aria-hidden="true"></i>
+				<h2>Steps</h2>
 			</a>
 		</article>
-
-{% for post in site.posts %}{% if post.frontpage %}
-	<article class="{{ post.style }}">
-		<span class="image">
-			{% if post.image contains '://' %}
-			<img src="{{ post.image }}" />
-			{% elsif post.image %}
-			<img src="{{ site.baseurl }}/{{ post.image }}" />
-			{% else %}
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-			{% endif %}
-		</span>
-		<a href="{{ post.url | prepend: site.baseurl }}">
-			<p>{{ post.when | date: "%b %-d, %Y" }}</p>
-			<h2>{{ post.title }}</h2>
-			<div class="content">
-				<p>{{ post.tagline }}</p>
-			</div>
-		</a>
-	</article>
-{% endif %}{% endfor %}
+		<article class="style7">
+			<span class="image">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+			</span>
+			<a href="overview.html">
+				<i class="fa fa-commenting" aria-hidden="true"></i>
+				<h2>Infos</h2>
+			</a>
+		</article>
 </section>
 
 <a name="tools"></a>
 <hr><h1>Tools</h1>
 <section id="toolbox" class="toolbox">
-{% for tool in site.de.toolbox.tools %}
+{% for tool in site.posts reversed %}
 	<span class="image">
 		{% if tool.image contains '://' %}
 		<img src="{{ tool.image }}" />
@@ -65,57 +55,47 @@ layout: default
 		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
 		{% endif %}
 	</span>
-	<div class="categories">
-	{% for cat in site.de.toolbox.categories %}
-		{% if tool.categories contains cat.name %}
-		<a title="{{ cat.title }}" href="#cat{{ cat.name }}" class="cat-{{ cat.name }}">
-			<span>{{ cat.name }}</span>
-		</a>
-		{% endif %}
-	{% endfor %}
-	</div>
-	<a href="{{ tool.url }}" target="_blank">
-		<h3>{{ tool.name }}</h3>
+	<a href="{{ tool.url }}">
+		<h3>
+			{{ tool.title }}
+			<span class="categories">
+				{% for cat in site.de.toolbox.categories %}
+					{% if tool.categories contains cat.name %}
+					<a title="{{ cat.title }}" href="#cat{{ cat.name }}"
+						 class="pipeline cat-{{ cat.name }}">
+						<span>{{ cat.name }}</span>
+					</a>
+					{% endif %}
+				{% endfor %}
+			</span>
+		</h3>
 		<div class="content">
-			<p>{{ tool.info }}</p>
+			<p>{{ tool.tagline }}</p>
 		</div>
-	</a>
+	</a><br clear="all">
 {% endfor %}
 </section>
 
 <a name="categories"></a>
-<hr><h1>Categories</h1>
+<hr><h1>Steps</h1>
 {% for cat in site.de.toolbox.categories %}
 <section class="toolbox" id="cat{{ cat.name }}">
 	<a name="{{ cat.name }}"></a>
 	<div class="part{{ forloop.index }}">
+		<span class="pipeline cat-{{ cat.name }}"></span>
 		<h2>{{ cat.title }}</h2>
 		<p class="subtitle">{{ cat.info }}</p>
-		<div class="tiles">
-
-		</div>
 	</div>
 </section>
 {% endfor %}
 
 <a name="contact"></a>
-<hr><h1>Contact</h1>
+<hr>
 <section class="contact" id="contact">
 	<h2>{{ site.de.signup.title }}</h2>
+	<p>{{ site.de.signup.header }}</p>
 	<form method="post" action="https://utou.ch/scoda.php">
 		<div class="row uniform">
-			<div class="6u 12u$(small)">
-				{{ site.de.signup.header }}
-				<div class="select-wrapper">
-					<select name="SKILL" id="signup-category">
-						<option value="">{{ site.de.signup.skills }}</option>
-						<option value="Beginner">{{ site.de.signup.beginner }}</option>
-						<option value="Intermediate">{{ site.de.signup.intermediate }}</option>
-						<option value="Advanced">{{ site.de.signup.advanced }}</option>
-						<option value="Expert">{{ site.de.signup.expert }}</option>
-					</select>
-				</div>
-			</div>
 			<div class="6u 12u$(xsmall)">
 				<input type="text" name="NAME" id="signup-name" value="" placeholder="{{ site.de.signup.name }}" required />
 			</div>
@@ -124,6 +104,15 @@ layout: default
 			</div>
 			<div class="12u$">
 				<textarea name="COMMENT" id="signup-message" placeholder="{{ site.de.signup.comment }}" rows="6" required></textarea>
+			</div>
+			<div class="6u$ select-wrapper">
+				<select name="SKILL" id="signup-category">
+					<option value="">{{ site.de.signup.skills }}</option>
+					<option value="Beginner">{{ site.de.signup.beginner }}</option>
+					<option value="Intermediate">{{ site.de.signup.intermediate }}</option>
+					<option value="Advanced">{{ site.de.signup.advanced }}</option>
+					<option value="Expert">{{ site.de.signup.expert }}</option>
+				</select>
 			</div>
 			<div class="12u$">
 				<div class="g-recaptcha" data-sitekey="{{ site.grecaptcha.key }}"></div>

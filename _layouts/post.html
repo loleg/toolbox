@@ -6,6 +6,27 @@ layout: default
   <h1>{{ page.title }}</h1>
 </header>
 
+<section id="toolbox" class="toolbox">
+  {% for cat in site.de.toolbox.categories %}
+    {% if page.categories contains cat.name %}
+    <a title="{{ cat.title }}" href="/#cat{{ cat.name }}"
+       class="pipeline cat-{{ cat.name }}"></a>
+    {% endif %}
+  {% endfor %}
+
+  {% if page.download %}
+  <a href="{{ page.download }}" target="_blank">
+    <button class="btn btn-default btn-lg">Download</button>
+  </a>
+  {% endif %}
+
+  {% if page.document %}
+  <a href="{{ page.document }}" target="_blank">
+    <button class="btn btn-default btn-lg">Documentation</button>
+  </a>
+  {% endif %}
+</section><br clear="all"><br>
+
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,fr,it', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
@@ -14,5 +35,8 @@ function googleTranslateElementInit() {
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
 	{{ content }}
-	<hr><p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+	<hr><p>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% if page.author %} • Recommended by: <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+  </p>
 </article>
