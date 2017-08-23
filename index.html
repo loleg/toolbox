@@ -45,7 +45,7 @@ layout: default
 <a name="tools"></a>
 <hr><h1>Tools</h1>
 <section id="toolbox" class="toolbox">
-{% for tool in site.posts reversed %}
+{% for tool in site.posts %}
 	<span class="image">
 		{% if tool.image contains '://' %}
 		<img src="{{ tool.image }}" />
