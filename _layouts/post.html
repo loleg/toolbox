@@ -7,7 +7,7 @@ layout: default
 </header>
 
 <section id="toolbox" class="toolbox">
-  {% for cat in site.de.toolbox.categories %}
+  {% for cat in site.en.toolbox.categories %}
     {% if page.categories contains cat.name %}
     <a title="{{ cat.title }}" href="/#cat{{ cat.name }}"
        class="pipeline cat-{{ cat.name }}"></a>

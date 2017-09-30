@@ -1,52 +1,29 @@
 # Language-specific strings
-de:
-  title: Toolbox - School of Data CH
-  tagline: Data Toolbox
+en:
+  title: Reviews - School of Data CH
+  tagline: Datasets Review
   description: >
-    Empfohlene Open Source Tools für den Umgang mit offenen Daten.
-    Wir bieten auch Unterstützung über unser
+    Community examined datasets, which we also discuss on our
     <a href="https://forum.schoolofdata.ch/categories">Forum</a>
-    und organisieren projektbasierte
+    and put to use in our
     <a href="https://schoolofdata.ch">Workshops</a>.
   signup:
-    title: Empfehlen
+    title: Contribute
     name: Name
     email: E-mail
-    comment: Nachricht
-    skills: Empfohlenes Niveau ..
-    beginner: Anfanger
-    intermediate: Erfahrenen
-    advanced: Profi
-    expert: Experten
-    send: Senden
-  toolbox:
-    categories:
-      - name: ask
-        title: Ask
-        info: These tools can help to formulate good questions, which is key to finding good data.
-      - name: find
-        title: Find
-        info: Searching and finding data that has already been released is easier with portals and agents.
-      - name: get
-        title: Get
-        info: Beyond file downloads, data is collected data in forms, mobile apps, scraping and aggregation.
-      - name: verify
-        title: Verify
-        info: Tools to check authenticity and authority, completeness and consistency of datasets.
-      - name: clean
-        title: Clean
-        info: Removing invalid entries, combining datasets, and doing any number of other normalizations.
-      - name: analyse
-        title: Analyse
-        info: Machines can do a lot of it, but working with data will always involve analytical work.
-      - name: present
-        title: Present
-        info: Tools to package data in an appropriate way for the audiences we wish to aim it at.
+    comment: Recommendation, with links to web pages with details.
+    type: Type ..
+    types:
+      ogd: Open Government Data
+      sci: Scientific Data
+      crowd: Crowdsourced Data
+      linked: Linked Data
+    send: Send
 
 # Site links
-title: School of Data Toolbox
+title: Data Reviews
 region: Switzerland
-url: "https://toolbox.schoolofdata.ch"
+url: "https://reviews.schoolofdata.ch"
 email: info@schoolofdata.ch
 forum: "https://forum.schoolofdata.ch"
 twitter: schoolofdata_ch
