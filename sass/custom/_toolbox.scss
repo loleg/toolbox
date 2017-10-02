@@ -18,45 +18,4 @@
       clear: both;
     }
   }
-
-  .categories .pipeline {
-    float: none;
-    margin-right: 5px;
-    height: 48px;
-    width: 48px;
-  }
-}
-
-.pipeline {
-  float: left;
-  margin-right: 1em;
-
-  font-size: 0px;
-  background-repeat: no-repeat;
-  height: 64px;
-  width: 64px;
-  display: inline-block;
-  background-size: contain;
-  border: none;
-  &.cat-ask {
-    background-image: url(/images/pipeline-ask.png);
-  }
-  &.cat-analyse {
-    background-image: url(/images/pipeline-analyse.png);
-  }
-  &.cat-clean {
-    background-image: url(/images/pipeline-clean.png);
-  }
-  &.cat-find {
-    background-image: url(/images/pipeline-find.png);
-  }
-  &.cat-get {
-    background-image: url(/images/pipeline-get.png);
-  }
-  &.cat-present {
-    background-image: url(/images/pipeline-present.png);
-  }
-  &.cat-verify {
-    background-image: url(/images/pipeline-verify.png);
-  }
 }
