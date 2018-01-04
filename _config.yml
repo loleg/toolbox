@@ -19,29 +19,65 @@ de:
     advanced: Profi
     expert: Experten
     send: Senden
-  toolbox:
-    categories:
-      - name: ask
-        title: Ask
-        info: These tools can help to formulate good questions, which is key to finding good data.
-      - name: find
-        title: Find
-        info: Searching and finding data that has already been released is easier with portals and agents.
-      - name: get
-        title: Get
-        info: Beyond file downloads, data is collected data in forms, mobile apps, scraping and aggregation.
-      - name: verify
-        title: Verify
-        info: Tools to check authenticity and authority, completeness and consistency of datasets.
-      - name: clean
-        title: Clean
-        info: Removing invalid entries, combining datasets, and doing any number of other normalizations.
-      - name: analyse
-        title: Analyse
-        info: Machines can do a lot of it, but working with data will always involve analytical work.
-      - name: present
-        title: Present
-        info: Tools to package data in an appropriate way for the audiences we wish to aim it at.
+en:
+  title: Toolbox - School of Data CH
+  tagline: Data Toolbox
+  description: >
+    Recommended Open Source Tools for working with open data.
+    You can seek advice on these through our
+    <a href="https://forum.schoolofdata.ch/categories">Forum</a>
+    and our the hands-on
+    <a href="https://schoolofdata.ch">Workshops</a> we organise.
+  signup:
+    title: Recommend
+    name: Name
+    email: E-mail
+    comment: Message
+    skills: Skill level ..
+    beginner: Beginner
+    intermediate: Experienced
+    advanced: Professional
+    expert: Expert
+    send: Send
+
+# Toolbox categories
+toolbox:
+  categories:
+    - name: ask
+      title: Ask
+      info:
+        en: These tools can help to formulate good questions, which is key to finding good data.
+        de: Diese Tools können dabei helfen, gute Fragen zu formulieren. Dies ist der Schlüssel zum Finden guter Daten.
+    - name: find
+      title: Find
+      info:
+        en: Searching and finding data that has already been released is easier with portals and agents.
+        de: Das Suchen und Finden bereits veröffentlichter Daten ist mit Portalen und Agenten einfacher.
+    - name: get
+      title: Get
+      info:
+        en: Beyond file downloads, data is collected data in forms, mobile apps, scraping and aggregation.
+        de: Neben Datei-Downloads werden Daten in Formularen, mobilen Apps, Scraping und Aggregation gesammelt.
+    - name: verify
+      title: Verify
+      info:
+        en: Tools to check authenticity and authority, completeness and consistency of datasets.
+        de: Tools zur Überprüfung der Authentizität und Autorität, Vollständigkeit und Konsistenz von Datensätzen.
+    - name: clean
+      title: Clean
+      info:
+        en: Removing invalid entries, combining datasets, and doing any number of other normalizations.
+        de: Entfernen ungültiger Einträge, Kombinieren von Datensätzen und Durchführen einer beliebigen Anzahl anderer Normalisierungen.
+    - name: analyse
+      title: Analyse
+      info:
+        en: Machines can do a lot of it, but working with data will always involve analytical work.
+        de: Maschinen können selber vieles tun, aber die Arbeit mit Daten erfordert immer analytische Arbeit.
+    - name: present
+      title: Present
+      info:
+        en: Tools to package data in an appropriate way for the audiences we wish to aim it at.
+        de: Tools, um Daten in geeigneter Weise für die Zielgruppen zu paketieren, auf die wir zielen wollen.
 
 # Site links
 title: School of Data Toolbox

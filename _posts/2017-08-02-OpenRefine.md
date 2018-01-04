@@ -6,7 +6,9 @@ categories: [ "clean", "analyse" ]
 download: http://openrefine.org/
 document: https://felixlohmeier.gitbooks.io/seminar-wir-bauen-uns-einen-bibliothekskatalog/content/07_0_datentransformation_mit_openrefine.html
 image: https://datalets.ch/projects/openrefine.jpg
-tagline: Ein mächtiges Werkzeug um mit "chaotischen Daten" umzugehen.
+tagline:
+  en: A powerful tool to work with "messy data" and make improvements.
+  de: Ein mächtiges Werkzeug um mit "chaotischen Daten" umzugehen.
 date: 2017-08-02
 ---
 

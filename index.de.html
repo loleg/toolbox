@@ -1,15 +1,15 @@
 ---
 title: Data Toolbox
-language: English
-lang: en
+language: Deutsch
+lang: de
 ref: index
 layout: default
 ---
 
 <header>
-	<h1>{{ site.en.tagline }}</h1>
-	<a href="index.de.html">DEUTSCH</a>
-	<h5>{{ site.en.description }}</h5>
+	<h1>{{ site.de.tagline }}</h1>
+	<a href="index.html">ENGLISH</a>
+	<h5>{{ site.de.description }}</h5>
 </header>
 
 <section id="frontpage" class="tiles">
@@ -20,7 +20,7 @@ layout: default
 			</span>
 			<a href="#tools">
 				<i class="fa fa-wrench" aria-hidden="true"></i>
-				<h2>Tools</h2>
+				<h2>Werkzeug</h2>
 			</a>
 		</article>
 		<article class="style7">
@@ -29,7 +29,7 @@ layout: default
 			</span>
 			<a href="#categories">
 				<i class="fa fa-cubes" aria-hidden="true"></i>
-				<h2>Steps</h2>
+				<h2>Stufen</h2>
 			</a>
 		</article>
 		<article class="style7">
@@ -44,7 +44,7 @@ layout: default
 </section>
 
 <a name="tools"></a>
-<hr><h1>Tools</h1>
+<hr><h1>Werkzeug</h1>
 <section id="toolbox" class="toolbox">
 {% for tool in site.posts %}
 	<span class="image">
@@ -71,21 +71,21 @@ layout: default
 			</span>
 		</h3>
 		<div class="content">
-			<p>{{ tool.tagline.en }}</p>
+			<p>{{ tool.tagline.de }}</p>
 		</div>
 	</a><br clear="all">
 {% endfor %}
 </section>
 
 <a name="categories"></a>
-<hr><h1>Steps</h1>
+<hr><h1>Stufen</h1>
 {% for cat in site.toolbox.categories %}
 <section class="toolbox" id="cat{{ cat.name }}">
 	<a name="{{ cat.name }}"></a>
 	<div class="part{{ forloop.index }}">
 		<span class="pipeline cat-{{ cat.name }}"></span>
 		<h2>{{ cat.title }}</h2>
-		<p class="subtitle">{{ cat.info.en }}</p>
+		<p class="subtitle">{{ cat.info.de }}</p>
 	</div>
 </section>
 {% endfor %}
@@ -93,33 +93,33 @@ layout: default
 <a name="contact"></a>
 <hr>
 <section class="contact" id="contact">
-	<h2>{{ site.en.signup.title }}</h2>
-	<p>{{ site.en.signup.header }}</p>
+	<h2>{{ site.de.signup.title }}</h2>
+	<p>{{ site.de.signup.header }}</p>
 	<form method="post" action="https://utou.ch/scoda.php">
 		<div class="row uniform">
 			<div class="6u 12u$(xsmall)">
-				<input type="text" name="NAME" id="signup-name" value="" placeholder="{{ site.en.signup.name }}" required />
+				<input type="text" name="NAME" id="signup-name" value="" placeholder="{{ site.de.signup.name }}" required />
 			</div>
 			<div class="6u$ 12u$(xsmall)">
-				<input type="email" name="EMAIL" id="signup-email" value="" placeholder="{{ site.en.signup.email }}" required />
+				<input type="email" name="EMAIL" id="signup-email" value="" placeholder="{{ site.de.signup.email }}" required />
 			</div>
 			<div class="12u$">
-				<textarea name="COMMENT" id="signup-message" placeholder="{{ site.en.signup.comment }}" rows="6" required></textarea>
+				<textarea name="COMMENT" id="signup-message" placeholder="{{ site.de.signup.comment }}" rows="6" required></textarea>
 			</div>
 			<div class="6u$ select-wrapper">
 				<select name="SKILL" id="signup-category">
-					<option value="">{{ site.en.signup.skills }}</option>
-					<option value="Beginner">{{ site.en.signup.beginner }}</option>
-					<option value="Intermediate">{{ site.en.signup.intermediate }}</option>
-					<option value="Advanced">{{ site.en.signup.advanced }}</option>
-					<option value="Expert">{{ site.en.signup.expert }}</option>
+					<option value="">{{ site.de.signup.skills }}</option>
+					<option value="Beginner">{{ site.de.signup.beginner }}</option>
+					<option value="Intermediate">{{ site.de.signup.intermediate }}</option>
+					<option value="Advanced">{{ site.de.signup.advanced }}</option>
+					<option value="Expert">{{ site.de.signup.expert }}</option>
 				</select>
 			</div>
 			<div class="12u$">
 				<div class="g-recaptcha" data-sitekey="{{ site.grecaptcha.key }}"></div>
 				<input type="hidden" name="lang" value="" />
 				<ul class="actions">
-					<li><input type="submit" value="{{ site.en.signup.send }}" class="special" /></li>
+					<li><input type="submit" value="{{ site.de.signup.send }}" class="special" /></li>
 				</ul>
 			</div>
 		</div>

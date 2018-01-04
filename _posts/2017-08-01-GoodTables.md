@@ -5,7 +5,9 @@ title: GoodTables
 categories: [ "verify", "clean" ]
 document: http://goodtables.okfnlabs.org/
 image: http://assets.okfn.org/p/labs/img/icon-512.png
-tagline: Online tool to check for structural problems and ensure that data fits a specific schema.
+tagline:
+  en: Online tool to check for structural problems and ensure that data fits a specific schema.
+  de: Tool zur Überprüfung von Daten und um sicherzustellen, dass die in ein bestimmtes Schema passen.
 date: 2017-08-01
 ---
 
